@@ -13,13 +13,13 @@ export function teste1(numbers: number[]): number[] {
     return results;
   }
 
-  const arrUnique = [... new Set(findDuplicates(numbers))];
+  const arrUnique = [... new Set(findDuplicates(numbers))]; // Recurso ainda não presente na versão atual do TypeScript, suportando apenas iteráveis ​​em Arrays no momento. Mas isto não esta prejudicando o funcionamento do codigo
   const orderedNumbers = arrUnique.sort((a, b) => a - b);
   return orderedNumbers;
 }
 
 export function teste2(users: User[]): User {
-  const nomeProcurado = users.find((user) => user.name.includes('Alvares Cabral'));
+  const wantedName = users.find((user) => user.name.includes('Alvares Cabral'));
 
-  return nomeProcurado;
+  return wantedName;
 }
